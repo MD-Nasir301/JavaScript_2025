@@ -30,22 +30,5 @@ let person1 = {
 };
 console.log(person1["first name"], person1["last name"]);
 
-let add = function (b, a = 4) {
-  console.log(a + b);
-};
 
-add(3);
 
-function test(n) {
-  return n % 2 === 0;
-}
-console.log(test(23));
-
-let addd = (a, b) => a + b;
-
-console.log(addd(3, 2));
-
-// IIFE Immediately Invoked Function Expression
-(() => {
-  console.log("Hellow everyone");
-})();
