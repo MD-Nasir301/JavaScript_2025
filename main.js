@@ -88,14 +88,26 @@ let price = [
 
 // } )
 
-let cart = [5, 20, 10, 10, 25, 50, 30, 5, 30];
-let discount = document.getElementById("discount");
-let totalPrice = document.getElementById("totalPrice");
-let finalPrice = document.getElementById("finalPrice");
+// let cart = [5, 20, 10, 10, 25, 50, 30, 5, 30];
+// let discount = document.getElementById("discount");
+// let totalPrice = document.getElementById("totalPrice");
+// let finalPrice = document.getElementById("finalPrice");
 
-discount.addEventListener("input", () => {
-  let result = cart.reduce((a, cr) => a + cr);
-  totalPrice.textContent = result;
-  let finalResutl = result - (result * discount.value) / 100;
-  finalPrice.textContent = finalResutl;
-});
+// discount.addEventListener("input", () => {
+//   let result = cart.reduce((a, cr) => a + cr);
+//   totalPrice.textContent = result;
+//   let finalResutl = result - (result * discount.value) / 100;
+//   finalPrice.textContent = finalResutl;
+// });
+
+let arr2 = [2, 3, 6, 4, 5, 1, 1, 20, 3, 0, 5];
+let res = arr2.reduce((a, cr) => (cr > a ? cr : a));
+console.log(res);
+
+let sor = arr2.sort((a, b) => a - b);
+console.log("sort: " + sor);
+
+let names = ["a", "b", "c", "d", "e", "f"];
+
+let sortNames = names.sort((a, b) => a.localeCompare(b));
+console.log(sortNames);
