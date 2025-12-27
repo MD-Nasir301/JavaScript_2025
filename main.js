@@ -47,6 +47,19 @@ console.log(addd(3, 2));
 
 // IIFE Immediately Invoked Function Expression
 (() => {
-  console.log("Hellow everyone");
+  console.log("Hello everyone");
 })();
+
+let added = (a, b) => {
+  console.log(a + b);
+};
+added(2, 3);
+
+(() => {
+  console.log("hi");
+})();
+
+let multiply = (() => 2 * 3)();
+console.log(multiply);
+
 
