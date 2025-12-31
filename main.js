@@ -31,6 +31,7 @@ let person1 = {
 console.log(person1["first name"], person1["last name"]);
 
 let add = function (b, a = 4) {
+  console.log("----------------------------------");
   console.log(a + b);
 };
 
@@ -39,10 +40,11 @@ add(3);
 function test(n) {
   return n % 2 === 0;
 }
+console.log("----------------------------------");
 console.log(test(23));
 
 let addd = (a, b) => a + b;
-
+console.log("----------------------------------");
 console.log(addd(3, 2));
 
 // IIFE Immediately Invoked Function Expression
@@ -51,21 +53,24 @@ console.log(addd(3, 2));
 })();
 
 let added = (a, b) => {
+  console.log("----------------------------------");
   console.log(a + b);
 };
 added(2, 3);
 
 (() => {
+  console.log("----------------------------------");
   console.log("hi");
 })();
 
 let multiply = (() => 2 * 3)();
+console.log("----------------------------------");
 console.log(multiply);
 
 let arr1 = [2, 4, 6, 8];
 
 let ne = arr1.map((a) => a * 2);
-
+console.log("----------------------------------");
 console.log(ne);
 
 let price = [
@@ -102,12 +107,103 @@ let price = [
 
 let arr2 = [2, 3, 6, 4, 5, 1, 1, 20, 3, 0, 5];
 let res = arr2.reduce((a, cr) => (cr > a ? cr : a));
+console.log("----------------------------------");
 console.log(res);
 
 let sor = arr2.sort((a, b) => a - b);
+console.log("----------------------------------");
 console.log("sort: " + sor);
 
 let names = ["a", "b", "c", "d", "e", "f"];
 
 let sortNames = names.sort((a, b) => a.localeCompare(b));
+console.log("----------------------------------");
 console.log(sortNames);
+
+let users = [
+  { id: 1, name: "Nasir", age: 30 },
+  { id: 2, name: "Mukul", age: 30 },
+];
+
+let find = users.find((a) => a.id == 1);
+console.log("----------------------------------");
+console.log(find);
+
+const students = [
+  { id: 1, name: "Rahim", marks: 85, class: "Ten" },
+  { id: 2, name: "Karim", marks: 78, class: "Nine" },
+  { id: 3, name: "Sumaiya", marks: 92, class: "Ten" },
+  { id: 4, name: "Nishat", marks: 74, class: "Eight" },
+  { id: 5, name: "Hasan", marks: 88, class: "Nine" },
+  { id: 6, name: "Rafi", marks: 81, class: "Ten" },
+];
+
+let rs = students.find((a) => a.marks > 80);
+console.log("----------------------------------");
+console.log(rs);
+
+// Destructuring:
+const usr = {
+  namee: "Nasir",
+  age: 31,
+};
+
+let { namee: usrName, age } = usr;
+console.log("----------------------------------");
+console.log(usrName, age);
+
+const user1 = {
+  u1Name: "Babu",
+  age: 31,
+};
+let { city = "Dhaka" } = user1;
+console.log("----------------------------------");
+console.log(city);
+
+let arrr = [2, "+", 3, "-", 2];
+
+// ইউটিউভ ভিডিও দেখে অনুশীলন শুরু: https://youtu.be/EerdGm-ehJQ 22 ঘণ্টা ভিডিও।
+
+let na = "Nasir";
+let str = `Hello! ${na} how are you?`;
+console.log("----------------------------------");
+console.log(str);
+
+let btns = document.querySelectorAll(".key");
+
+let cartItems = [];
+let item = "T-Shirt";
+function showQuantity() {
+  console.log("ShowQuantity: " + cartItems.length);
+}
+
+function addOneItem() {
+  cartItems.push(item);
+}
+
+function addTwoItems() {
+  cartItems.push(item, item);
+}
+function addThreeItems() {
+  cartItems.push(item, item, item);
+}
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.textContent === "Show Quantity") {
+      showQuantity();
+    } else if (btn.textContent === "Add to Cart") {
+      addOneItem();
+      showQuantity();
+    } else if (btn.textContent === "+2") {
+      addTwoItems();
+      showQuantity();
+    } else if (btn.textContent === "+3") {
+      addThreeItems();
+      showQuantity();
+    } else {
+      cartItems = [];
+      showQuantity();
+    }
+  });
+});
