@@ -173,37 +173,31 @@ let btns = document.querySelectorAll(".key");
 
 let cartItems = [];
 let item = "T-Shirt";
-function showQuantity() {
-  console.log("ShowQuantity: " + cartItems.length);
-}
-
-function addOneItem() {
-  cartItems.push(item);
-}
-
-function addTwoItems() {
-  cartItems.push(item, item);
-}
-function addThreeItems() {
-  cartItems.push(item, item, item);
-}
 
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.textContent === "Show Quantity") {
-      showQuantity();
+      console.log("ShowQuantity: " + cartItems.length);
+      console.log(cartItems);
     } else if (btn.textContent === "Add to Cart") {
-      addOneItem();
-      showQuantity();
+      addItems(item, 1);
     } else if (btn.textContent === "+2") {
-      addTwoItems();
-      showQuantity();
+      addItems(item, 2);
     } else if (btn.textContent === "+3") {
-      addThreeItems();
-      showQuantity();
+      addItems(item, 3);
     } else {
       cartItems = [];
-      showQuantity();
+      console.log("ShowQuantity: " + cartItems.length);
+      console.log(cartItems);
     }
   });
 });
+
+// all Functions ----------------
+function addItems(item, quantity) {
+  for (let i = 0; i < quantity; i++) {
+    cartItems.push(item);
+  }
+  console.log("ShowQuantity: " + cartItems.length);
+  console.log(cartItems);
+}
