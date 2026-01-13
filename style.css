@@ -1,0 +1,11 @@
+.progress {
+  width: 500px;
+  height: 30px;
+  background-color: lightgray;
+  position: relative;
+  transition: 1s;
+}
+.progress:hover {
+  width: 0;
+  transition: 3s linear;
+}
