@@ -329,29 +329,230 @@
 
 // )
 
-let ts = {
-  "20-02-2026": [
-    {
-      time: "10:5",
-      work: "home",
-    },
-    {
-      time: "12:20",
-      work: "FootBall",
-    },
-    {
-      time: "06:00",
-      work: "Reading",
-    },
-  ],
-};
+// let ts = {
+//   "20-02-2026": [
+//     {
+//       time: "10:5",
+//       work: "home",
+//     },
+//     {
+//       time: "12:20",
+//       work: "FootBall",
+//     },
+//     {
+//       time: "06:00",
+//       work: "Reading",
+//     },
+//   ],
+// };
 
-let js = {
-  name : "Rahim",
-  age : 25,
-}
+// let js = {
+//   name : "Rahim",
+//   age : 25,
+// }
 
-let date_Key = 
+//let date_Key = Object.keys(ts);
 
+// console.log()
 
-console.log(Object.keys(ts))
+// let tasksStore = [
+//   {
+//     date: "01-01-2026",
+//     time: "10:00 AM",
+//     title: "Task 1",
+//   },
+//   {
+//     date: "01-01-2026",
+//     time: "10:00 AM",
+//     title: "Task 5",
+//   },
+//   {
+//     date: "02-02-2026",
+//     time: "30:50 AM",
+//     title: "Task 2",
+//   },
+// ];
+
+// let group = tasksStore.reduce((acc, obj) => {
+//   let { date, time, title } = obj;
+//   let key = date;
+
+//   if (!acc[key]) {
+//     acc[key] = [];
+//   }
+
+//   acc[key].push({ time, title });
+
+//   return acc;
+// }, {});
+
+// let arr = Object.entries(group);
+
+// let newGroup = arr.map((obj) => {
+//   let date = obj[0];
+//   let task = obj[1];
+//   return { [date]: task };
+// });
+
+// console.log(JSON.stringify(newGroup));
+
+// let tasksGroup = tasksStore.reduce((acc, obj) => {
+//   let {date, time, title} = obj;
+//   let key = date;
+
+//   if(!acc[key]){
+//     acc[key] = []
+//   }
+//   acc[key].push({time, title})
+//   return acc;
+
+// },{})
+
+// let tasksByDate = Object.entries(tasksGroup).map(([date, task]) => {
+//  return {[date]: task}
+// })
+
+let str = "Nasir";
+
+// console.log(str.length);
+// console.log("----------------------------------");
+// console.log(str.charAt(3));
+// console.log("----------------------------------");
+// console.log("index of i: " + str.indexOf("i"));
+// console.log("----------------------------------");
+
+// let username = "john_doe";
+
+// if (username.length < 6 || username.includes(" ")) {
+//   console.log("Invalid Username");
+// } else {
+//   console.log("Valid Username");
+// }
+
+// let email = "test@gmail.com";
+
+// if (email.includes("@") && email.indexOf("@") > 0) {
+//   console.log("Valid Email");
+// } else {
+//   console.log("Invalid Email");
+// }
+
+// let cardNumber = "0316422235625";
+// console.log(cardNumber.slice(-4));
+
+// let ind = email.indexOf("@");
+
+// console.log(email.slice(ind+1))
+
+const emailArray = [
+  "userS@Babu.com",
+  "userS@Babu.com",
+  "user1@gmail.com",
+  "user2@gmail.com",
+  "user3@gmail.com",
+  "user4@gmail.com",
+  "user5@gmail.com",
+  "user6@gmail.com",
+  "user7@gmail.com",
+  "user8@gmail.com",
+  "user9@gmail.com",
+  "user10@gmail.com",
+
+  "alpha@yahoo.com",
+  "beta@yahoo.com",
+  "gamma@yahoo.com",
+  "delta@yahoo.com",
+  "epsilon@yahoo.com",
+  "zeta@yahoo.com",
+  "eta@yahoo.com",
+  "theta@yahoo.com",
+
+  "demo1@outlook.com",
+  "demo2@outlook.com",
+  "demo3@outlook.com",
+  "demo4@outlook.com",
+  "demo5@outlook.com",
+  "demo6@outlook.com",
+  "demo7@outlook.com",
+
+  "test1@icloud.com",
+  "test2@icloud.com",
+  "test3@icloud.com",
+  "test4@icloud.com",
+  "test5@icloud.com",
+
+  "sample1@protonmail.com",
+  "sample2@protonmail.com",
+  "sample3@protonmail.com",
+  "sample4@protonmail.com",
+
+  "info1@company.com",
+  "info2@company.com",
+  "info3@company.com",
+
+  "contact1@mail.com",
+  "contact2@mail.com",
+  "contact3@mail.com",
+
+  "userA@gmail.com",
+];
+
+// let groupedEmail = emailArray.reduce((acc, email) => {
+//   let domain = email.split("@")[1];
+
+//   acc[domain] = ( acc[domain] ?? 0) +1
+
+//   return acc;
+// }, {});
+
+// console.log(groupedEmail);
+
+// let b = 1;
+// let d = b++; //1
+// let d = b+1; //2
+
+// let obj = [
+//   {
+//     name: "Nasir",
+//     age: 26,
+//     address: "Dhaka",
+//     city: "Dhaka",
+//     country: "Bangladesh",
+//   },
+//   {
+//     name: "Babu",
+//     age: 26,
+//     address: "Dhaka",
+//     city: "Dhaka",
+//     country: "Bangladesh",
+//   },
+// ];
+
+// let arr = [
+//   {
+//     "Dahka" : [Nasir, Babu]
+//   }
+// ]
+
+// let personObj = {
+//   name: "Nasir",
+//   age: 30,
+// };
+
+// let arr = [
+//   sf
+// ]
+
+// let obj2 ={}
+
+//  obj2[personObj.name] = (personObj.name ?? 0)  +1
+
+let email = "testNasir@icloud.com";
+let index = email.indexOf("@");
+
+let name = email.slice(0, index);
+let domain = email.slice(index);
+let showName = name.slice(0, 2);
+let showName2 = name.slice(-2);
+let result = showName + "***" + showName2 + domain;
+console.log(result);
